@@ -14,124 +14,159 @@
         <!-- En-tête et navigation principale -->
         <header>
             <!-- Titre et logo -->
-            <h1>Reservia</h1>
-            <p>Trouvez votre hébergement pour des vacances de rêve</p>
+            <p><img src="elements/images/items/reservia_logo.png" alt="Reservia" /></p>
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
             <!-- Navigation principale -->
             <nav>
                 <ul>
                     <li><a href="#hebergements">Hébergements</a></li>
                     <li><a href="#activites">Activités</a></li>
-                    <li><a href="#">S'inscrire</a></li>
                 </ul>
             </nav>
+            <!-- Inscription -->
+            <p><a href="#">S'inscrire</a></p>
         </header>
 
-        <!-- Recherche -->
-        <section>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Marseille, France" />
-                <input type="submit" value="Rechercher" />
-            </form>
-            <div>
-                <h4>Filtres</h4>
-                <p><a href="#">Economique</a></p>
-                <p><a href="#">Familial</a></p>
-                <p><a href="#">Romantique</a></p>
-                <p><a href="#">Animaux autorisés</a></p>
-            </div>
-            
-            <p>Plus de 500 logements sont disponibles dans cette ville</p>
-        </section>
+        <main>
+            <!-- Recherche hébergement -->
+            <section>
+                <form action="#">
+                    <input type="text" name="location" placeholder="Marseille, France" />
+                    <input type="submit" value="Rechercher" />
+                </form>
+                <div>
+                    <h3>Filtres</h3>
+                    <ul id="filtres">
+                        <li><input type="button" value="Economique" /></li>
+                        <li><input type="button" value="Familial" /></li>
+                        <li><input type="button" value="Romantique" /></li>
+                        <li><input type="button" value="Animaux autorisés" /></li>
+                    </ul>
+                </div>
+                
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </section>
 
-        <!-- Résultats populaires -->
-        <section>
-            <h3>Les plus populaires</h3>
-            <!-- Conteneur flexbox populaires -->
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </section>
+            <!-- Résultats populaires -->
+            <section>
+                <h2>Les plus populaires</h2>
+                <!-- Conteneur flexbox populaires -->
+                <div>
+                    <article>
+                        <h1>Hôtel Le soleil du matin</h1>
+                        <p>Nuit à partir de 128<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                    <article>
+                        <h1>Au c&oelig;ur de l'eau Chambres d'hôtes</h1>
+                        <p>Nuit à partir de 71<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                    <article>
+                        <h1>Hôtel Tout bleu et Blanc</h1>
+                        <p>Nuit à partir de 68<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                </div>
+            </section>
 
-        <!-- Résultats de la recherche -->
-        <main id="hebergements">
-            <h2>Hébergement à marseille</h2>
-            <!-- Conteneur flexbox résultats -->
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <p>Afficher plus</p>
+            <!-- Résultats de la recherche -->
+            <section id="hebergements">
+                <h2>Hébergement à marseille</h2>
+                <!-- Conteneur flexbox résultats -->
+                <div>
+                    <article>
+                        <h1>Auberge la Cannebière</h1>
+                        <p>Nuit à partir de 25<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                    <article>
+                        <h1>Hôtel du port</h1>
+                        <p>Nuit à partir de 52<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                    <article>
+                        <h1>Hôtel Les mouettes</h1>
+                        <p>Nuit à partir de 76<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                    <article>
+                        <h1>Hôtel de la mer</h1>
+                        <p>Nuit à partir de 46<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                    <article>
+                        <h1>Auberge Le Panier</h1>
+                        <p>Nuit à partir de 23<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                    <article>
+                        <h1>Hôtel chez Amina</h1>
+                        <p>Nuit à partir de 96<b>&euro;</b></p>
+                        <p>(font awesome *****)</p>
+                    </article>
+                </div>
+                <p>Afficher plus</p>
+            </section>
         </main>
 
         <!-- Suggestions en lien avec la recherche -->
-        <aside id="activites">
-            <h3>Activités à Marseille</h3>
+        <section id="activites">
+            <h2>Activités à Marseille</h2>
             <!-- Conteneur flexbox suggestions -->
             <div>
                 <figure>
-                    <img src="" alt="" />
+                    <img src="elements/images/results/" alt="" />
                     <figcaption>Vieux Port</figcaption>
                 </figure>
                 <figure>
-                    <img src="" alt="" />
+                    <img src="elements/images/results/" alt="" />
                     <figcaption>Fort Pomègues</figcaption>
                 </figure>
                 <figure>
-                    <img src="" alt="" />
+                    <img src="elements/images/results/" alt="" />
                     <figcaption>Iles du Frioul</figcaption>
                 </figure>
                 <figure>
-                    <img src="" alt="" />
+                    <img src="elements/images/results/" alt="" />
                     <figcaption>Parc National des Calanques</figcaption>
                 </figure>
                 <figure>
-                    <img src="" alt="" />
+                    <img src="elements/images/results/" alt="" />
                     <figcaption>Notre-Dame-de-la-Garde</figcaption>
                 </figure>
                 <figure>
-                    <img src="" alt="" />
+                    <img src="elements/images/results/" alt="" />
                     <figcaption>Parc Longchamp</figcaption>
                 </figure>
             </div>
-        </aside>
+        </section>
 
         <!-- Informations et assistance -->
-        <footer>
-            <!-- Conteneur flexbox footer -->
-            <div>
-                <div>
-                    <h4>A propos</h4>
-                    <ul>
-                        <li><a href="#">Fonctionnement du site</a></li>
-                        <li><a href="#">Conditions générales de vente</a></li>
-                        <li><a href="#">Données et confidentialité</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Nos hébergements</h4>
-                    <ul>
-                        <li><a href="#">Charte qualité</a></li>
-                        <li><a href="#">Soumettre votre hôtel</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Assistance</h4>
-                    <ul>
-                        <li><a href="#">Centre d'aide</a></li>
-                        <li><a href="#">Nous contacter</a></li>
-                    </ul>
-                </div>
-            </div>
+        <footer id="informations">
+            <nav>
+                <h2>A propos</h2>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <h2>Nos hébergements</h2>
+                <ul>
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Soumettre votre hôtel</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <h2>Assistance</h2>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </nav>
         </footer>
     
     </body>
