@@ -90,17 +90,17 @@ header nav.quick-link ul li {
     width: 50%;
 }
 
-header nav.quick-link ul li.link-selected {
-    border-bottom: 3px solid #0065FC;
-}
-
-header nav.quick-link ul li.link-selected a {
-    color: #0065FC;
+header nav.quick-link ul li {
+    border-bottom: 3px solid #F2F2F2;
     font-weight: 500;
 }
 
-header nav.quick-link ul li.link-normal {
-    border-bottom: 3px solid #F2F2F2;
+header nav.quick-link ul li:hover {
+    border-bottom: 3px solid #0065FC;
+}
+
+header nav.quick-link ul li:hover a {
+    color: #0065FC;
 }
 
 /* ---------------------------------------- */
@@ -390,19 +390,19 @@ footer li {
         padding: 40px;
     }
 
-    header nav.quick-options {
+    header nav.quick-link {
         flex-grow: 0;
     }
 
-    header nav.quick-options ul {
+    header nav.quick-link ul {
         margin: 0;
     }
 
-    header nav.quick-options ul li {
+    header nav.quick-link ul li {
         padding-top: 40px;
     }
     
-    header nav.quick-options ul li.option-selected {
+    header nav.quick-link ul li.link-selected {
         border-top: 2px solid #0065FC;
         border-bottom: none;
     }
