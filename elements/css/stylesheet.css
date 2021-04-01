@@ -152,7 +152,11 @@ input#destination {
     border: 1px solid #f2f2f2;
     color: #000000;
     margin-right: -15px;
-    width: 55%;
+    max-width: 55%;
+}
+
+input#destination:focus {
+    background-color: #f2f2f2;
 }
 
 button#find {
@@ -162,26 +166,31 @@ button#find {
     color: #ffffff;
 }
 
+button#find:active {
+    background: #000000;
+    border: 1px solid #000000;
+}
+
 /* ---------------------------------------- */
 
 
 /* -------------------- Filters list */
 
-div#filters {
+div.filters {
     display: flex;
     flex-flow: column nowrap;
 }
 
-div#filters h3 {
+div.filters h3 {
     margin: 12px 0;
 }
 
-div#filters ul {
+div.filters ul {
     margin: 0;
     padding: 0;
 }
 
-div#filters li {
+div.filters li {
     background: #ffffff;
     border: 2px solid #ffffff;
     border-radius: 100px;
@@ -189,12 +198,12 @@ div#filters li {
     margin: 0 4px 8px 0;
 }
 
-div#filters li:hover {
+div.filters li:hover {
     background-color: #d9d9d9;
     border: 2px solid #ffffff;
 }
 
-div#filters span {
+div.filters span {
     border-radius: 25px;
     background-color: #deebff;
     color: #0065fc;
@@ -203,7 +212,7 @@ div#filters span {
     /* transform:scale(0.8,1); Resizing icon ? */
 }
 
-div#filters input {
+div.filters input {
     background-color: transparent;
     border: 2px solid #d9d9d9;
     border-radius: 25px;
@@ -219,7 +228,7 @@ div#filters input {
 
 div.informations {
     display: flex;
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
 }
 
 div.informations span {
@@ -369,12 +378,6 @@ section#suggestions {
     padding: 0 20px 30px 20px;
 }
 
-section#suggestions a {
-    display: block;
-    width:100%;
-    height:100%;
-}
-
 section#suggestions figure {
     background-color: #ffffff;
     border-radius: 20px;
@@ -382,6 +385,7 @@ section#suggestions figure {
     margin: 20px 0;
     transition: all 0.2s ease-in;
 }
+
 /* Hovering effect
 section#suggestions figure:hover {
     box-shadow: 0 2px 8px #dddddd;
@@ -436,35 +440,34 @@ footer li {
 
 
 
+/* =========================================================================== */
+/* ================================================== Adjustements for tablet type screens */
+/* =========================================================================== */
+
+@media screen and (min-width: 480px) {
+
+    header, main, section#suggestions {
+        margin: 0 15px;
+    }
 
 
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 480px) { /* Adjustements for tablet type screens */
-    
     /* ================================================== LOGO and NAVIGATION */
 
     header {
         justify-content: right;
+        margin-left: 0;
     }
 
     header div.logo {
         flex-grow: 1;
-        padding-top: 40px;
+        padding-top: 30px;
     }
 
     header div.register {
         border-top: 2px solid #ffffff;
         flex-grow: 0;
         order: 4;
-        padding: 40px 15px;
+        padding: 40px 5px;
     }
 
     nav.quick-link {
@@ -500,15 +503,211 @@ footer li {
     }
 
     /* =========================================================================== */
+
+
+    /* ================================================== SEARCH a destination */
+
+    h1 {
+        margin-top: 24px;
+    }
+
+    section.search-destination p {
+        margin: 0 0 10px 0;
+    }
+
+    input#destination {
+        margin-right: -32px;
+    }
+
+    button#find {
+        border-radius: 0 15px 15px 0;
+    }
+    
+    button#find::before {
+        color: #ffffff;
+        content: "Rechercher";
+        margin-right: -18px;
+    }
+
+    button#find span {
+        visibility: hidden;
+    }
+
+    /* ---------------------------------------- */
+
+    /* =========================================================================== */
+
+
+
+
+    /* ================================================== SUGGESTION associated with search */
+
+    div.panels {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div.panels div {
+        width: 300px;
+    }
+
+    section#suggestions img {
+        height: 390px;
+    }
+
+    section#suggestions img.half-panel {
+        height: 165px;
+    }
+/*
+    section#suggestions a {
+        display: initial;
+        width:initial;
+        height:initial;
+    }
+    }section#suggestions img {
+        object-position: 50% 20%;
+    }
+*/
+
+    /* =========================================================================== */
+
+
+
+
+    /* ================================================== INFORMATIONS and HELP */
+
+    footer {
+        padding: 30px 100px 30px 50px;
+    }
+
+    footer nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    footer ul {
+        margin-right: 100px;
+        padding-top: 0;
+    }
+
+    /* =========================================================================== */    
 }
 
 
-@media screen and (min-width: 768px) {  /* Adjustements for desktop type screens */
-    
+
+
+/* =========================================================================== */
+/* ================================================== Adjustements for desktop type screens */
+/* =========================================================================== */
+
+@media screen and (min-width: 768px) {
+
+    body {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    header, main {
+        margin: 0 50px;
+    }
+
+    section#suggestions {
+        margin: 0 35px;
+    }
+
+
+    /* ================================================== LOGO and NAVIGATION */
+
+    header {
+        justify-content: right;
+        margin-left: 50px;
+    }
+
+    header div.logo {
+        flex-grow: 1;
+        padding-top: 40px;
+    }
 
     header div.register {
         order: 4;
         flex-grow: 0;
         padding: 40px;
     }
+
+    /* =========================================================================== */
+
+
+
+    /* ================================================== SEARCH a destination */
+
+    /* -------------------- Filters list */
+
+    div.filters {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+    
+    div.filters ul {
+        margin-left: 32px;
+    }
+    
+    div.filters li {
+        margin-right: 16px;
+    }
+
+    /* ---------------------------------------- */
+
+    div.informations {
+        margin-bottom: 10px;
+    }
+    
+    /* =========================================================================== */
+
+   
+    
+
+    /* ================================================== POPULAR and DESTINATION and results */
+
+    main {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-end;
+        align-content: stretch;
+    }
+
+    section.results-popular, section.results-destination {
+        background-color: #f2f2f2;
+        border-radius: 25px;
+    }
+
+    section.search-destination {
+        flex: 0 1 100%;
+    }
+
+    section.results-popular {
+        flex: 0 1 25%;
+        margin-left: 50px;
+    }
+
+    section.results-popular article {
+        min-width: 350px;
+    }
+
+    section.results-destination {
+        flex: 1 1 50%;
+    }
+
+    section.results-destination div.results-panels {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    /* =========================================================================== */
+
 }
