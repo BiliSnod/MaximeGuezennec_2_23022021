@@ -84,7 +84,7 @@ nav.quick-link ul {
     padding: 0; /* 100% screen width for "quick links"  */
 }
 
-nav.quick-link ul li {
+nav.quick-link li {
     border-bottom: 3px solid #f2f2f2;
     flex-grow: 1;
     min-width: 100px;
@@ -94,11 +94,19 @@ nav.quick-link ul li {
     width: 50%;
 }
 
-nav.quick-link ul li:hover {
+nav.quick-link li:first-child {
     border-bottom: 3px solid #0065fc;
 }
 
-nav.quick-link ul li:hover a {
+nav.quick-link li:first-child a {
+    color: #0065fc;
+}
+
+nav.quick-link li:hover {
+    border-bottom: 3px solid #0065fc;
+}
+
+nav.quick-link li:hover a {
     color: #0065fc;
 }
 
@@ -453,42 +461,54 @@ footer li {
     }
 
     header div.register {
+        border-top: 2px solid #ffffff;
+        flex-grow: 0;
         order: 4;
-        flex-grow: 0;
-        padding: 40px;
+        padding: 40px 15px;
     }
 
-    header nav.quick-link {
+    nav.quick-link {
         flex-grow: 0;
     }
 
-    header nav.quick-link ul {
+    nav.quick-link ul {
         margin: 0;
     }
 
-    header nav.quick-link ul li {
-        padding-top: 40px;
-    }
-    
-    header nav.quick-link ul li.link-selected {
-        border-top: 2px solid #0065fc;
+    nav.quick-link li {
         border-bottom: none;
-    }
-    
-    header nav.quick-options ul li.option-selected a {
-        color: #0065fc;
         font-weight: 500;
+        padding: 40px 10px 0 10px;
+        width:max-content;
     }
     
-    header nav.quick-options ul li.option-normal {
-        border-top: 2px solid #ffffff;
+    nav.quick-link li:hover {
         border-bottom: none;
+    }
+
+    nav.quick-link li:first-child {
+        border-bottom: none;
+        border-top: 2px solid #0065fc;
+    }
+
+    nav.quick-link li:last-child {
+        border-top: 2px solid #ffffff;
+    }
+
+    nav.quick-link li:last-child:hover {
+        border-top: 2px solid #d9d9d9;
     }
 
     /* =========================================================================== */
 }
 
-/* Adjustements for desktop type screens 
-@media screen and (min-width: 768px) {  
+
+@media screen and (min-width: 768px) {  /* Adjustements for desktop type screens */
+    
+
+    header div.register {
+        order: 4;
+        flex-grow: 0;
+        padding: 40px;
+    }
 }
-*/
