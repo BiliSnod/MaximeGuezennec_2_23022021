@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: #0065FC;
+    color: #0065fc;
     text-decoration: none;
 }
 
@@ -44,6 +44,7 @@ header {
 
 header div.logo {
     padding: 20px 5px 5px 20px;
+    flex-grow: 1;
 }
 
 /* ---------------------------------------- */
@@ -59,7 +60,7 @@ header div.register {
 }
 
 header div.register a {
-    color: #0065FC;
+    color: #0065fc;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -73,34 +74,32 @@ header div.register a:hover {
 
 /* -------------------- Quick links */
 
-header nav.quick-link {
+nav.quick-link {
     flex-grow: 2;
 }
 
-header nav.quick-link ul {
+nav.quick-link ul {
     display: flex;
     list-style-type: none;
     padding: 0; /* 100% screen width for "quick links"  */
 }
 
-header nav.quick-link ul li {
-    padding: 10px;
+nav.quick-link ul li {
+    border-bottom: 3px solid #f2f2f2;
     flex-grow: 1;
+    min-width: 100px;
+    font-weight: 500;
+    padding: 10px;
     text-align: center;
     width: 50%;
 }
 
-header nav.quick-link ul li {
-    border-bottom: 3px solid #F2F2F2;
-    font-weight: 500;
+nav.quick-link ul li:hover {
+    border-bottom: 3px solid #0065fc;
 }
 
-header nav.quick-link ul li:hover {
-    border-bottom: 3px solid #0065FC;
-}
-
-header nav.quick-link ul li:hover a {
-    color: #0065FC;
+nav.quick-link ul li:hover a {
+    color: #0065fc;
 }
 
 /* ---------------------------------------- */
@@ -118,26 +117,41 @@ section.search-destination {
     padding: 0 20px;
 }
 
-section.search-destination input#destination {
-    border: 1px solid #F2F2F2;
-    color: #000000;
+h1 {
+    font-size: 1.35rem;
+    margin: 12px 0;
+}
+
+section.search-destination input, section.search-destination button {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 700;
     margin: 10px 0;
     padding: 15px;
 }
 
-section.search-destination input#find {
-    background: #0065FC;
-    border: 1px solid #0065FC;
+span.pin {
+    background-color: #f2f2f2;
+    border-radius: 15px 0 0 15px;
+    font-size: 1.1rem;
+    margin-right: -5px;
+    padding: 18px;
+    padding-top: 17px;
+    position: relative;
+}
+
+input#destination {
+    border: 1px solid #f2f2f2;
+    color: #000000;
+    margin-right: -15px;
+    width: 55%;
+}
+
+button#find {
+    background: #0065fc;
+    border: 1px solid #0065fc;
     border-radius: 15px;
     color: #ffffff;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 15px;
 }
 
 /* ---------------------------------------- */
@@ -145,27 +159,73 @@ section.search-destination input#find {
 
 /* -------------------- Filters list */
 
+div#filters {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#filters h3 {
+    margin: 12px 0;
+}
+
 div#filters ul {
+    margin: 0;
     padding: 0;
 }
 
-div#filters ul li {
-    display: inline;
+div#filters li {
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 0 4px 8px 0;
+}
+
+div#filters li:hover {
+    background-color: #d9d9d9;
+    border: 2px solid #ffffff;
+}
+
+div#filters span {
+    border-radius: 25px;
+    background-color: #deebff;
+    color: #0065fc;
+    padding: 17px;
+    position: relative;
+    /* transform:scale(0.8,1); Resizing icon ? */
 }
 
 div#filters input {
-    background: #ffffff;
-    border: 2px solid #D9D9D9;
+    background-color: transparent;
+    border: 2px solid #d9d9d9;
     border-radius: 25px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 0 0 10px 5px;
-    padding: 15px;
+    font-size: 1rem;
+    margin: 0 0 0 -45px;
+    padding: 14px 14px 13px 50px;
 }
 
-div#filters input:hover {
-    background-color: #d9d9d9;
+/* ---------------------------------------- */
+
+
+/* -------------------- Destinations informations */
+
+div.informations {
+    display: flex;
+    margin: 0 0 20px 0;
+}
+
+div.informations span {
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    color: #0065fc;
+    font-size: 0.7rem;
+    margin: 0 10px 20px 0;
+    padding: 5px 9px;
+}
+
+div.informations p:last-child {
+    font-size: 0.95rem;
+    padding: 4px 0 ;
 }
 
 /* ---------------------------------------- */
@@ -183,6 +243,11 @@ section.results-popular, section.results-destination {
 
 section.results-popular {
     background: #f2f2f2;
+}
+
+section.results-popular h2 span {
+    float: right;
+    /* width ? */
 }
 
 section.results-destination {
@@ -222,7 +287,7 @@ article img {
 
 article span { /* Rating stars */
     font-size: 0.7rem;
-    color: #0065FC;
+    color: #0065fc;
 }
 
 article span.empty {
@@ -374,7 +439,10 @@ footer li {
 
 
 
-@media screen and (min-width: 460px) { /* Adjustements for tablet type screens */
+@media screen and (min-width: 480px) { /* Adjustements for tablet type screens */
+    
+    /* ================================================== LOGO and NAVIGATION */
+
     header {
         justify-content: right;
     }
@@ -403,12 +471,12 @@ footer li {
     }
     
     header nav.quick-link ul li.link-selected {
-        border-top: 2px solid #0065FC;
+        border-top: 2px solid #0065fc;
         border-bottom: none;
     }
     
     header nav.quick-options ul li.option-selected a {
-        color: #0065FC;
+        color: #0065fc;
         font-weight: 500;
     }
     
@@ -416,6 +484,8 @@ footer li {
         border-top: 2px solid #ffffff;
         border-bottom: none;
     }
+
+    /* =========================================================================== */
 }
 
 /* Adjustements for desktop type screens 
