@@ -5,11 +5,12 @@
 
 /* ================================================== GENERAL properties */
 
-html {
+body {
     background-color: #ffffff;
     color: #000000;
     font-family: 'Raleway', sans-serif;
-    font-size: 0.85rem;
+    font-size: 1rem;
+    margin: 0;
 }
 
 a {
@@ -22,8 +23,8 @@ a:hover {
     text-decoration: none;
 }
 
-body {
-    margin: 0;
+section.results-popular, section.results-destination, section.suggestions {
+    padding: 20px;
 }
 
 /* =========================================================================== */
@@ -119,9 +120,7 @@ nav.quick-link li:hover a {
 
 /* ================================================== SEARCH a destination */
 
-/* -------------------- Search field */
-
-section.search-destination {
+div.headline, div.search-destination {
     padding: 0 20px;
 }
 
@@ -130,7 +129,10 @@ h1 {
     margin: 12px 0;
 }
 
-section.search-destination input, section.search-destination button {
+
+/* -------------------- Search field */
+
+div.search-destination input, div.search-destination button {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
@@ -254,10 +256,6 @@ div.informations p:last-child {
 
 /* ================================================== POPULAR and DESTINATION and results */
 
-section.results-popular, section.results-destination {
-    padding: 20px;
-}
-
 section.results-popular {
     background: #f2f2f2;
 }
@@ -329,7 +327,7 @@ p.popular-illustration img {
 }
 
 div.popular-description {
-    padding: 0 20px;
+    padding: 0 0 0 20px;
 }
 
 div.popular-description h2 {
@@ -337,7 +335,7 @@ div.popular-description h2 {
 }
 
 div.popular-description p:last-child {
-    padding-top: 36px;
+    padding-top: 15%;
 }
 
 /* ---------------------------------------- */
@@ -362,6 +360,7 @@ div.destination-description p:last-child {
 section p.more {
     font-size: 1.1rem;
     font-weight: 700;
+    margin-bottom: 0;
     margin-top: 30px;
 }
 
@@ -374,11 +373,11 @@ section p.more {
 
 /* ================================================== SUGGESTION associated with search */
 
-section#suggestions {
-    padding: 0 20px 30px 20px;
+section.suggestions {
+    padding-bottom: 30px;
 }
 
-section#suggestions figure {
+section.suggestions figure {
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 2px 8px #dddddd;
@@ -387,12 +386,12 @@ section#suggestions figure {
 }
 
 /* Hovering effect
-section#suggestions figure:hover {
+section.suggestions figure:hover {
     box-shadow: 0 2px 8px #dddddd;
     transform: scale(0.99, 0.99);
 }
 */
-section#suggestions img {
+section.suggestions img {
     border-radius: 20px 20px 0 0;
     object-fit: cover;
     object-position: 50% 20%;
@@ -400,13 +399,13 @@ section#suggestions img {
     width: 100%;
 }
 
-section#suggestions img.vertical-image {
+section.suggestions img.vertical-image {
     object-position: 50% 42%;
 }
 
-section#suggestions figcaption {
+section.suggestions figcaption {
     font-weight: 700;
-    padding: 15px;
+    padding: 15px 20px;
 }
 
 /* =========================================================================== */
@@ -418,7 +417,7 @@ section#suggestions figcaption {
 
 footer {
     background-color: #f2f2f2;
-    padding: 25px 20px;
+    padding: 25px;
 }
 
 footer h2 {
@@ -440,14 +439,26 @@ footer li {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================================== */
 /* ================================================== Adjustements for tablet type screens */
 /* =========================================================================== */
 
 @media screen and (min-width: 480px) {
 
-    header, main, section#suggestions {
-        margin: 0 15px;
+    header, main {
+        margin: 0 20px;
     }
 
 
@@ -511,7 +522,7 @@ footer li {
         margin-top: 24px;
     }
 
-    section.search-destination p {
+    div.search-destination p {
         margin: 0 0 10px 0;
     }
 
@@ -535,7 +546,40 @@ footer li {
 
     /* ---------------------------------------- */
 
+    section.results-popular, section.results-destination {
+        border-radius: 25px;
+    }
+
     /* =========================================================================== */
+
+
+
+
+
+
+
+    /* -------------------- Popular destinations panel */
+/*
+    p.popular-illustration img {
+        border-radius: 15px 0 0 15px;
+        height: 100%;
+        width: 200px;
+    }
+*/
+    section.results-destination div.results-panels {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    section.results-destination div.results-panels a {
+        flex-grow: 1;
+        width: 50%;
+    }
+
+    section.results-destination h2, section.results-destination div.results-panels article {
+        margin: 15px 2%;
+    }
 
 
 
@@ -553,20 +597,20 @@ footer li {
         width: 300px;
     }
 
-    section#suggestions img {
+    section.suggestions img {
         height: 390px;
     }
 
-    section#suggestions img.half-panel {
+    section.suggestions img.half-panel {
         height: 165px;
     }
 /*
-    section#suggestions a {
+    section.suggestions a {
         display: initial;
         width:initial;
         height:initial;
     }
-    }section#suggestions img {
+    }section.suggestions img {
         object-position: 50% 20%;
     }
 */
@@ -594,7 +638,20 @@ footer li {
     }
 
     /* =========================================================================== */    
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -604,27 +661,15 @@ footer li {
 /* =========================================================================== */
 
 @media screen and (min-width: 768px) {
-
-    body {
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
+    
     header, main {
-        margin: 0 50px;
-    }
-
-    section#suggestions {
-        margin: 0 35px;
+        margin: 0 auto;
+        max-width: 1340px;
+        padding: 0 50px;
     }
 
 
     /* ================================================== LOGO and NAVIGATION */
-
-    header {
-        justify-content: right;
-        margin-left: 50px;
-    }
 
     header div.logo {
         flex-grow: 1;
@@ -680,34 +725,50 @@ footer li {
         align-content: stretch;
     }
 
-    section.results-popular, section.results-destination {
-        background-color: #f2f2f2;
-        border-radius: 25px;
-    }
-
-    section.search-destination {
+    div.search-destination {
         flex: 0 1 100%;
     }
 
     section.results-popular {
         flex: 0 1 25%;
-        margin-left: 50px;
+        margin-left: 3%;
+        padding: 20px 36px;
     }
 
     section.results-popular article {
-        min-width: 350px;
+        min-width: 275px;
     }
 
+
+    
     section.results-destination {
-        flex: 1 1 50%;
+        flex: 1 1 5%;
+        background-color: #f2f2f2;
     }
 
-    section.results-destination div.results-panels {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+    section.results-destination div.results-panels a {
+        flex-grow: 1;
+        width: auto;
+    }
+    }
+
+    section.results-destination div.results-panels article {
+        margin: 15px 5%;
+    }
+
+    div.results-panels article {
+        min-width: 240px;
     }
 
     /* =========================================================================== */
+
+    /* ================================================== INFORMATIONS and HELP */
+
+    footer nav {
+        margin: 0 auto;
+        max-width: 1290px;
+    }
+
+    /* =========================================================================== */  
 
 }
