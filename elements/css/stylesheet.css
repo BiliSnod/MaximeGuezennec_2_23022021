@@ -120,7 +120,7 @@ nav.quick-link li:hover a {
 
 /* ================================================== SEARCH a destination */
 
-div.headline, div.search-destination {
+div.search-headline, div.search-destination {
     padding: 0 20px;
 }
 
@@ -178,21 +178,21 @@ button#find:active {
 
 /* -------------------- Filters list */
 
-div.filters {
+div.search-filters {
     display: flex;
     flex-flow: column nowrap;
 }
 
-div.filters h3 {
+div.search-filters h3 {
     margin: 12px 0;
 }
 
-div.filters ul {
+div.search-filters ul {
     margin: 0;
     padding: 0;
 }
 
-div.filters li {
+div.search-filters li {
     background: #ffffff;
     border: 2px solid #ffffff;
     border-radius: 100px;
@@ -200,12 +200,12 @@ div.filters li {
     margin: 0 4px 8px 0;
 }
 
-div.filters li:hover {
+div.search-filters li:hover {
     background-color: #d9d9d9;
     border: 2px solid #ffffff;
 }
 
-div.filters span {
+div.search-filters span {
     border-radius: 25px;
     background-color: #deebff;
     color: #0065fc;
@@ -214,7 +214,7 @@ div.filters span {
     /* transform:scale(0.8,1); Resizing icon ? */
 }
 
-div.filters input {
+div.search-filters input {
     background-color: transparent;
     border: 2px solid #d9d9d9;
     border-radius: 25px;
@@ -228,12 +228,12 @@ div.filters input {
 
 /* -------------------- Destinations informations */
 
-div.informations {
+div.search-informations {
     display: flex;
     margin-bottom: 20px;
 }
 
-div.informations span {
+div.search-informations span {
     border: 1px solid #d9d9d9;
     border-radius: 15px;
     color: #0065fc;
@@ -242,7 +242,7 @@ div.informations span {
     padding: 5px 9px;
 }
 
-div.informations p:last-child {
+div.search-informations p:last-child {
     font-size: 0.95rem;
     padding: 4px 0 ;
 }
@@ -457,32 +457,39 @@ footer li {
 
 @media screen and (min-width: 480px) {
 
-    header, main {
-        margin: 0 20px;
-    }
-
-
     /* ================================================== LOGO and NAVIGATION */
 
     header {
         justify-content: right;
-        margin-left: 0;
     }
+
+
+    /* -------------------- Logo */
 
     header div.logo {
         flex-grow: 1;
         padding-top: 30px;
     }
 
+    /* ---------------------------------------- */
+
+
+    /* -------------------- Register link */
+
     header div.register {
         border-top: 2px solid #ffffff;
         flex-grow: 0;
         order: 4;
-        padding: 40px 5px;
+        padding: 40px 5% 40px 5px;
     }
 
+    /* ---------------------------------------- */
+
+
+    /* -------------------- Quick links */
+
     nav.quick-link {
-        flex-grow: 0;
+        flex-grow: 0; /* limit width of "quick links" */
     }
 
     nav.quick-link ul {
@@ -493,7 +500,6 @@ footer li {
         border-bottom: none;
         font-weight: 500;
         padding: 40px 10px 0 10px;
-        width:max-content;
     }
     
     nav.quick-link li:hover {
@@ -513,14 +519,25 @@ footer li {
         border-top: 2px solid #d9d9d9;
     }
 
+    /* ---------------------------------------- */
+
     /* =========================================================================== */
+
+
 
 
     /* ================================================== SEARCH a destination */
 
+    main {
+        margin: 0 20px;
+    }
+
     h1 {
         margin-top: 24px;
     }
+
+
+    /* -------------------- Search field */
 
     div.search-destination p {
         margin: 0 0 10px 0;
@@ -546,62 +563,71 @@ footer li {
 
     /* ---------------------------------------- */
 
+    /* =========================================================================== */
+
+
+
+
+    /* ================================================== POPULAR and DESTINATION and results */
+
     section.results-popular, section.results-destination {
         border-radius: 25px;
     }
+
+
+    /* -------------------- Popular destinations panel */
+    /*
+    p.popular-illustration img {
+        border-radius: 15px 0 0 15px;
+        height: 100%;
+        width: 200px;
+    }
+    */
+    /* ---------------------------------------- */
+
+
+    /* -------------------- Destination results panel */
+
+    section.results-destination div.destination-panels {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    section.results-destination div.destination-panels a {
+        flex-grow: 1;
+        width: 50%; /* two columns */
+    }
+
+    section.results-destination h2, section.results-destination div.destination-panels article {
+        margin: 15px 2%;
+    }
+
+    /* ---------------------------------------- */
 
     /* =========================================================================== */
 
 
 
 
-
-
-
-    /* -------------------- Popular destinations panel */
-/*
-    p.popular-illustration img {
-        border-radius: 15px 0 0 15px;
-        height: 100%;
-        width: 200px;
-    }
-*/
-    section.results-destination div.results-panels {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
-
-    section.results-destination div.results-panels a {
-        flex-grow: 1;
-        width: 50%;
-    }
-
-    section.results-destination h2, section.results-destination div.results-panels article {
-        margin: 15px 2%;
-    }
-
-
-
-
     /* ================================================== SUGGESTION associated with search */
 
-    div.panels {
+    div.suggestions-panels {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
     }
 
-    div.panels div {
+    div.suggestions-panels div {
         width: 300px;
     }
 
-    section.suggestions img {
+    div.suggestions-panels img {
         height: 390px;
     }
 
-    section.suggestions img.half-panel {
+    div.suggestions-panels img.half-panel {
         height: 165px;
     }
 /*
@@ -610,6 +636,7 @@ footer li {
         width:initial;
         height:initial;
     }
+
     }section.suggestions img {
         object-position: 50% 20%;
     }
@@ -671,43 +698,59 @@ footer li {
 
     /* ================================================== LOGO and NAVIGATION */
 
+    /* -------------------- Logo */
+
     header div.logo {
-        flex-grow: 1;
         padding-top: 40px;
     }
 
+    /* ---------------------------------------- */
+
+
+    /* -------------------- Register link */
+
     header div.register {
-        order: 4;
-        flex-grow: 0;
-        padding: 40px;
+        padding-right: 20px;
     }
+
+    /* ---------------------------------------- */
 
     /* =========================================================================== */
 
 
 
+    
     /* ================================================== SEARCH a destination */
+
+    main {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-end;
+        align-content:stretch /* TO TEST */
+    }
+
 
     /* -------------------- Filters list */
 
-    div.filters {
+    div.search-filters {
         display: flex;
         flex-flow: row nowrap;
         margin-bottom: 25px;
         margin-top: 20px;
     }
     
-    div.filters ul {
+    div.search-filters ul {
         margin-left: 32px;
     }
     
-    div.filters li {
+    div.search-filters li {
         margin-right: 16px;
     }
 
     /* ---------------------------------------- */
 
-    div.informations {
+    
+    div.search-informations {
         margin-bottom: 10px;
     }
     
@@ -718,16 +761,7 @@ footer li {
 
     /* ================================================== POPULAR and DESTINATION and results */
 
-    main {
-        display: flex;
-        flex-flow: row-reverse wrap;
-        justify-content: flex-end;
-        align-content: stretch;
-    }
-
-    div.search-destination {
-        flex: 0 1 100%;
-    }
+    /* -------------------- Popular destinations panel */
 
     section.results-popular {
         flex: 0 1 25%;
@@ -735,38 +769,48 @@ footer li {
         padding: 20px 36px;
     }
 
-    section.results-popular article {
+    section.results-popular div.popular-panels article {
         min-width: 275px;
     }
 
+    /* ---------------------------------------- */
 
+
+    /* -------------------- Destination results panel */
     
     section.results-destination {
-        flex: 1 1 5%;
+        flex: 1 1 0; /* "0" allow "destination results panels" to form one column with narrowest desktop resolution */
         background-color: #f2f2f2;
     }
 
-    section.results-destination div.results-panels a {
-        flex-grow: 1;
-        width: auto;
-    }
-    }
-
-    section.results-destination div.results-panels article {
-        margin: 15px 5%;
-    }
-
-    div.results-panels article {
+    section.results-destination div.destination-panels a {
+        flex-grow: 1; /* delete ? */
+        width: 30%;  /* auto works only on Firefox */
         min-width: 240px;
     }
 
+    section.results-destination div.destination-panels article {
+        margin: 15px 5%;
+    }
+
+    /* ---------------------------------------- */
+
     /* =========================================================================== */
+
+
+
+
+    /* ================================================== SUGGESTION associated with search */
+    /* =========================================================================== */  
+
+
+
 
     /* ================================================== INFORMATIONS and HELP */
 
     footer nav {
         margin: 0 auto;
-        max-width: 1290px;
+        max-width: 1290px; /* always align (with main) the footer lists to the left */
     }
 
     /* =========================================================================== */  
