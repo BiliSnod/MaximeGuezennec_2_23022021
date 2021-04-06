@@ -87,8 +87,8 @@ nav.quick-link ul {
 nav.quick-link li {
     border-bottom: 3px solid #f2f2f2;
     flex-grow: 1;
-    min-width: 100px;
     font-weight: 500;
+    min-width: 100px;
     padding: 10px;
     text-align: center;
     width: 50%;
@@ -176,6 +176,7 @@ button#find:focus {
 button#find:active {
     background: #000000;
     border: 1px solid #000000;
+    color: #ffffff;
 }
 
 span.find-confirm {
@@ -608,7 +609,7 @@ footer li {
         width: 50%; /* two columns */
     }
 
-    section.results-destination h2, section.results-destination div.destination-panels article {
+    section.results-destination div.destination-panels article {
         margin: 15px 2%;
     }
 
@@ -701,7 +702,17 @@ footer li {
     /* -------------------- Logo */
 
     header div.logo {
-        padding-top: 40px;
+        padding-top: 42px;
+        padding-left: 0;
+    }
+
+    /* ---------------------------------------- */
+
+
+    /* -------------------- Register link */
+
+    nav.quick-link li {
+        min-width: 150px;
     }
 
     /* ---------------------------------------- */
@@ -729,6 +740,19 @@ footer li {
         align-content:stretch /* TO TEST */
     }
 
+    main h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    div.search-headline, div.search-destination {
+        padding-left: 5px;
+    }
+
+    div.search-headline p {
+        margin-top: 0;
+    }
+
 
     /* -------------------- Filters list */
 
@@ -745,6 +769,10 @@ footer li {
     
     div.search-filters li {
         margin-right: 16px;
+    }
+
+    div.search-filters button {
+        font-size: 1.1rem;
     }
 
     /* ---------------------------------------- */
@@ -766,11 +794,12 @@ footer li {
     section.results-popular {
         flex: 0 1 25%;
         margin-left: 3%;
-        padding: 20px 36px;
+        padding: 20px 36px 0;
     }
 
     section.results-popular div.popular-panels article {
         min-width: 275px;
+        margin-bottom: 30px;
     }
 
     p.popular-illustration {
@@ -789,6 +818,10 @@ footer li {
     section.results-destination {
         flex: 1 1 0; /* "0" allow "destination results panels" to form one column with narrowest desktop resolution */
         background-color: #f2f2f2;
+    }
+
+    section.results-destination h2 {
+        margin-left: 15px;
     }
 
     section.results-destination div.destination-panels a {
