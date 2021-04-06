@@ -62,7 +62,6 @@ header div.register {
 
 header div.register a {
     color: #0065fc;
-    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -126,7 +125,7 @@ div.search-headline, div.search-destination {
 
 h1 {
     font-size: 1.35rem;
-    margin: 12px 0;
+    margin: 18px 0 12px ;
 }
 
 
@@ -230,7 +229,7 @@ div.search-filters button {
     border-radius: 25px;
     font-size: 1rem;
     margin: 0 0 0 -45px;
-    padding: 14px 14px 13px 50px;
+    padding: 14px 16px 13px 54px;
 }
 
 /* ---------------------------------------- */
@@ -253,7 +252,6 @@ div.search-informations span {
 }
 
 div.search-informations p:last-child {
-    font-size: 0.95rem;
     padding: 4px 0 ;
 }
 
@@ -432,12 +430,12 @@ footer {
 
 footer h2 {
     font-size: 1.1rem;
+    margin: 25px 0 0;
 }
 
 footer ul {
     list-style-type: none;
     padding-left: 0;
-    padding-top: 10px;
 }
 
 footer li {
@@ -585,8 +583,13 @@ footer li {
 
     /* -------------------- Popular destinations panel */
     
+    p.popular-illustration {
+        min-width: 213px;
+        width: 42%;
+    }
+    
     p.popular-illustration img {
-        width: 220px;
+        width: 100%;
     }
     
     /* ---------------------------------------- */
@@ -693,7 +696,7 @@ footer li {
 /* ================================================== Adjustements for desktop type screens */
 /* =========================================================================== */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     
     header, main {
         margin: 0 auto;
@@ -778,6 +781,10 @@ footer li {
     section.results-popular div.popular-panels article {
         min-width: 275px;
     }
+
+    p.popular-illustration {
+        min-width: unset;
+    }
     
     p.popular-illustration img {
         width: 128px;
@@ -796,7 +803,7 @@ footer li {
     section.results-destination div.destination-panels a {
         flex-grow: 1; /* delete ? */
         width: 30%;  /* auto works only on Firefox */
-        min-width: 240px;
+        min-width: 230px;
     }
 
     section.results-destination div.destination-panels article {
