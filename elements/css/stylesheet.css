@@ -621,15 +621,17 @@ footer li {
 
     /* ================================================== SUGGESTION associated with search */
 
-    div.suggestions-panels {
+        div.suggestions-panels {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
     }
+    
 
     div.suggestions-panels div {
-        width: 300px;
+        width: 22.5%;
+        min-width: 280px;
     }
 
     div.suggestions-panels img {
@@ -818,6 +820,11 @@ footer li {
 
 
     /* ================================================== SUGGESTION associated with search */
+
+    section.suggestions {
+        padding: 40px 0;
+    }
+
     /* =========================================================================== */  
 
 
