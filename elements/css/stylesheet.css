@@ -13,12 +13,12 @@ body {
     margin: 0;
 }
 
-a {
+a, a:visited {
     color: #000000;
     text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus {
     color: #0065fc;
     text-decoration: none;
 }
@@ -168,9 +168,19 @@ button#find {
     color: #ffffff;
 }
 
+button#find:focus {
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    color: initial;
+}
+
 button#find:active {
     background: #000000;
     border: 1px solid #000000;
+}
+
+span.find-confirm {
+    display: none;
 }
 
 /* ---------------------------------------- */
@@ -200,7 +210,7 @@ div.search-filters li {
     margin: 0 4px 8px 0;
 }
 
-div.search-filters li:hover {
+div.search-filters li:hover, div.search-filters button:focus {
     background-color: #d9d9d9;
     border: 2px solid #ffffff;
 }
@@ -544,21 +554,19 @@ footer li {
     }
 
     input#destination {
-        margin-right: -32px;
+        margin-right: -36px;
     }
 
     button#find {
         border-radius: 0 15px 15px 0;
     }
-    
-    button#find::before {
-        color: #ffffff;
-        content: "Rechercher";
-        margin-right: -18px;
+
+    button#find span.fas {
+        display: none;
     }
 
-    button#find span {
-        visibility: hidden;
+    span.find-confirm {
+        display: initial;
     }
 
     /* ---------------------------------------- */
@@ -576,13 +584,11 @@ footer li {
 
 
     /* -------------------- Popular destinations panel */
-    /*
+    
     p.popular-illustration img {
-        border-radius: 15px 0 0 15px;
-        height: 100%;
-        width: 200px;
+        width: 220px;
     }
-    */
+    
     /* ---------------------------------------- */
 
 
@@ -759,7 +765,7 @@ footer li {
    
     
 
-    /* ================================================== POPULAR and DESTINATION and results */
+    /* ================================================== POPULAR and DESTINATION results */
 
     /* -------------------- Popular destinations panel */
 
@@ -771,6 +777,10 @@ footer li {
 
     section.results-popular div.popular-panels article {
         min-width: 275px;
+    }
+    
+    p.popular-illustration img {
+        width: 128px;
     }
 
     /* ---------------------------------------- */
