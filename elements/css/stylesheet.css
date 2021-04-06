@@ -621,37 +621,26 @@ footer li {
 
     /* ================================================== SUGGESTION associated with search */
 
-        div.suggestions-panels {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
+    section.suggestions {
+        max-width: 100%;
     }
-    
 
-    div.suggestions-panels div {
-        width: 22.5%;
-        min-width: 280px;
+    div.suggestions-panels {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        align-items: flex-start;
+        height: 840px;
+    }
+
+    div.suggestions-panels a {
+        width: 48%;
     }
 
     div.suggestions-panels img {
-        height: 390px;
-    }
-
-    div.suggestions-panels img.half-panel {
         height: 165px;
     }
-/*
-    section.suggestions a {
-        display: initial;
-        width:initial;
-        height:initial;
-    }
-
-    }section.suggestions img {
-        object-position: 50% 20%;
-    }
-*/
 
     /* =========================================================================== */
 
@@ -822,8 +811,44 @@ footer li {
     /* ================================================== SUGGESTION associated with search */
 
     section.suggestions {
+        width: 100%;
         padding: 40px 0;
     }
+
+    div.suggestions-panels {
+        height: 460px;
+    }
+
+    div.suggestions-panels img {
+        height: 134px;
+    }
+    
+    div.suggestions-panels a:nth-child(1) img, div.suggestions-panels a:nth-child(4) img {
+        height: 367px;
+    }
+    
+    div.suggestions-panels a:nth-child(2) img {
+        height: 172px;
+        flex: 1 1 auto;
+    }
+    
+    div.suggestions-panels a:nth-child(3) img {
+        height: 100px;
+        flex: 1 1 auto;
+    }
+    
+    div.suggestions-panels a:nth-child(5) img {
+        height: 120px;
+    }
+    
+    div.suggestions-panels a:nth-child(6) img {
+        height: 132px;
+    }
+
+    div.suggestions-panels a {
+        width: 22.5%;
+    }
+
 
     /* =========================================================================== */  
 
