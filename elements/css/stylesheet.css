@@ -740,7 +740,7 @@ footer li {
         align-content:stretch /* TO TEST */
     }
 
-    main h2 {
+    section > h2 {
         font-size: 1.4rem;
         margin-bottom: 10px;
     }
@@ -820,7 +820,7 @@ footer li {
         background-color: #f2f2f2;
     }
 
-    section.results-destination h2 {
+    section.results-destination > h2 {
         margin-left: 15px;
     }
 
