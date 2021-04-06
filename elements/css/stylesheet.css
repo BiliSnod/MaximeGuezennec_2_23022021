@@ -214,7 +214,7 @@ div.search-filters span {
     /* transform:scale(0.8,1); Resizing icon ? */
 }
 
-div.search-filters input {
+div.search-filters button {
     background-color: transparent;
     border: 2px solid #d9d9d9;
     border-radius: 25px;
