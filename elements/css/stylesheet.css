@@ -205,7 +205,7 @@ div.search-filters ul {
 div.search-filters li {
     background: #ffffff;
     border: 2px solid #ffffff;
-    border-radius: 100px;
+    border-radius: 50px;
     display: inline-block;
     margin: 0 4px 8px 0;
 }
@@ -216,12 +216,15 @@ div.search-filters li:hover, div.search-filters button:focus {
 }
 
 div.search-filters span {
-    border-radius: 25px;
+    align-items: center;
     background-color: #deebff;
+    border-radius: 25px;
     color: #0065fc;
-    padding: 17px;
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
     position: relative;
-    /* transform:scale(0.8,1); Resizing icon ? */
+    width: 50px;
 }
 
 div.search-filters button {
@@ -771,8 +774,14 @@ footer li {
         margin-right: 16px;
     }
 
+    div.search-filters span {
+        height: 54px;
+        width: 54px;
+    }
+
     div.search-filters button {
         font-size: 1.1rem;
+        padding-bottom: 15px;
     }
 
     /* ---------------------------------------- */
