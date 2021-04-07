@@ -272,9 +272,10 @@ section.results-popular {
     background: #f2f2f2;
 }
 
-section.results-popular h2 span {
-    float: right;
-    /* width ? */
+section.results-popular > h2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 section.results-destination {
@@ -432,8 +433,9 @@ footer {
     padding: 25px;
 }
 
-footer h2 {
+footer p {
     font-size: 1.1rem;
+    font-weight: 700;
     margin: 25px 0 0;
 }
 
