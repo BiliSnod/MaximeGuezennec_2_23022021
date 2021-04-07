@@ -266,7 +266,7 @@ div.search-informations p:last-child {
 
 
 
-/* ================================================== POPULAR and DESTINATION and results */
+/* ================================================== POPULAR and DESTINATION results */
 
 section.results-popular {
     background: #f2f2f2;
@@ -426,14 +426,14 @@ section.suggestions figcaption {
 
 
 
-/* ================================================== INFORMATIONS and HELP */
+/* ================================================== NOTICE and HELP */
 
 footer {
     background-color: #f2f2f2;
     padding: 25px;
 }
 
-footer p {
+p.notice-title {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 25px 0 0;
@@ -580,7 +580,7 @@ footer li {
 
 
 
-    /* ================================================== POPULAR and DESTINATION and results */
+    /* ================================================== POPULAR and DESTINATION results */
 
     section.results-popular, section.results-destination {
         border-radius: 25px;
@@ -589,6 +589,12 @@ footer li {
 
     /* -------------------- Popular destinations panel */
     
+    section.results-popular div.popular-panels article {
+        margin: 15px auto;
+        min-width: 390px;
+        max-width: 80%;
+    }
+
     p.popular-illustration {
         min-width: 213px;
         width: 42%;
@@ -653,7 +659,7 @@ footer li {
 
 
 
-    /* ================================================== INFORMATIONS and HELP */
+    /* ================================================== NOTICE and HELP */
 
     footer {
         padding: 30px 100px 30px 50px;
@@ -899,7 +905,7 @@ footer li {
 
 
 
-    /* ================================================== INFORMATIONS and HELP */
+    /* ================================================== NOTICE and HELP */
 
     footer nav {
         margin: 0 auto;
