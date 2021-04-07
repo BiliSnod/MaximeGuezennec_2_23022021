@@ -23,6 +23,10 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 section.results-popular, section.results-destination, section.suggestions {
     padding: 20px;
 }
@@ -210,6 +214,7 @@ div.search-filters li {
 
 div.search-filters li:hover, div.search-filters button:focus {
     background-color: #d9d9d9;
+    transition: all 0.2s ease-in;
 }
 
 div.search-filters span {
